@@ -1,0 +1,25 @@
+# Local assistant and account configuration
+/.codex/
+/.agents/
+/.aws/
+
+# IDE and build output
+/.idea/
+/.gradle/
+/build/
+*.iml
+/local.properties
+
+/release.txt
+
+# Local environment and generated provider metadata
+.env
+.env.*
+!.env.example
+.hcl-assist.providers.json
+
+# OS and editor temporary files
+.DS_Store
+Thumbs.db
+*~
+*.swp

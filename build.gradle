@@ -1,0 +1,54 @@
+plugins { id 'java' }
+
+group = 'dev.hclassist'
+version = '0.2.2'
+
+// Build against an installed IntelliJ SDK; no IDE download is required.
+def ideaHome = providers.gradleProperty('ideaHome').orElse(providers.environmentVariable('IDEA_HOME'))
+if (!ideaHome.isPresent()) {
+    throw new GradleException('Set IDEA_HOME or pass -PideaHome=/path/to/idea (use the oldest supported SDK for release builds).')
+}
+dependencies {
+    compileOnly fileTree(dir: "${ideaHome.get()}/lib", include: ['*.jar'])
+    testImplementation fileTree(dir: "${ideaHome.get()}/lib", include: ['*.jar'])
+}
+java { toolchain { languageVersion = JavaLanguageVersion.of(21) } }
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }
+tasks.withType(JavaCompile).configureEach { options.release = 17 }
+tasks.named('processResources') { from('LICENSE') { into 'META-INF' } }
+
+tasks.register('coreTest', JavaExec) {
+    dependsOn testClasses
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.hclassist.core.CoreTest'
+    enableAssertions = true
+}
+tasks.named('check') { dependsOn 'coreTest' }
+// Core tests are executable regressions rather than JUnit classes.
+tasks.named('test') { enabled = false }
+tasks.register('buildPlugin', Zip) {
+    dependsOn check, jar
+    archiveFileName = "hcl-assist-${project.version}.zip"
+    destinationDirectory = layout.buildDirectory.dir('distributions')
+    into('hcl-assist/lib') { from tasks.jar }
+}
+tasks.register('prepareSandbox', Sync) {
+    dependsOn jar
+    into layout.buildDirectory.dir('sandbox/plugins/hcl-assist/lib')
+    from tasks.jar
+}
+tasks.register('runIde', Exec) {
+    dependsOn prepareSandbox
+    def sandbox = layout.buildDirectory.dir('sandbox').get().asFile
+    // Supply the official HCL plugin using -PhclPluginDir=/path/to/terraform.
+    doFirst {
+        if (providers.gradleProperty('hclPluginDir').isPresent()) {
+            copy {
+                from providers.gradleProperty('hclPluginDir').get()
+                into new File(sandbox, 'plugins/terraform')
+            }
+        }
+    }
+    environment 'IDEA_PROPERTIES', file('sandbox.properties').absolutePath
+    commandLine "${ideaHome.get()}/bin/idea", file('examples').absolutePath
+}

@@ -1,0 +1,3 @@
+# Eight tab-separated fields. Extend an imaginary Packer builder.
+packer	source:custom-cloud	endpoint	attribute	string	API endpoint for your custom builder.	https://example.com/builder	
+packer	source:custom-cloud	region	attribute	string	Target region for your custom builder.	https://example.com/builder	

@@ -1,0 +1,782 @@
+# dialect	context	name	kind	type	description	url	template
+terraform	root	variable	block	block	Declare an input variable.	https://developer.hashicorp.com/terraform/language	variable "$CARET" {\n  \n}
+terraform	root	locals	block	block	Define named expressions referenced through local.name.	https://developer.hashicorp.com/terraform/language	locals {\n  $CARET\n}
+terraform	variable:*	type	attribute	expression	Input type constraint, such as string, number, list(string), or object({...}).	https://developer.hashicorp.com/terraform/language	
+terraform	variable:*	default	attribute	expression	Fallback input value used when no value is supplied.	https://developer.hashicorp.com/terraform/language	
+terraform	variable:*	description	attribute	string	Human-readable explanation of this value.	https://developer.hashicorp.com/terraform/language	
+terraform	variable:*	sensitive	attribute	bool	Mark values as sensitive to reduce accidental display in output.	https://developer.hashicorp.com/terraform/language	
+terraform	variable:*	validation	block	block	Validation configuration.	https://developer.hashicorp.com/terraform/language	validation {\n  $CARET\n}
+terraform	variable:*/validation	condition	attribute	expression	Boolean expression that must be true for this condition to pass.	https://developer.hashicorp.com/terraform/language	
+terraform	variable:*/validation	error_message	attribute	string	Message shown when the condition evaluates to false.	https://developer.hashicorp.com/terraform/language	
+packer	root	variable	block	block	Declare an input variable.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	variable "$CARET" {\n  \n}
+packer	root	locals	block	block	Define named expressions referenced through local.name.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	locals {\n  $CARET\n}
+packer	variable:*	type	attribute	expression	Input type constraint, such as string, number, list(string), or object({...}).	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	variable:*	default	attribute	expression	Fallback input value used when no value is supplied.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	variable:*	description	attribute	string	Human-readable explanation of this value.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	variable:*	sensitive	attribute	bool	Mark values as sensitive to reduce accidental display in output.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	variable:*	validation	block	block	Validation configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	validation {\n  $CARET\n}
+packer	variable:*/validation	condition	attribute	expression	Boolean expression that must be true for this condition to pass.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	variable:*/validation	error_message	attribute	string	Message shown when the condition evaluates to false.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+nomad	root	variable	block	block	Declare an input variable.	https://developer.hashicorp.com/nomad/docs/job-specification	variable "$CARET" {\n  \n}
+nomad	root	locals	block	block	Define named expressions referenced through local.name.	https://developer.hashicorp.com/nomad/docs/job-specification	locals {\n  $CARET\n}
+nomad	variable:*	type	attribute	expression	Input type constraint, such as string, number, list(string), or object({...}).	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	variable:*	default	attribute	expression	Fallback input value used when no value is supplied.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	variable:*	description	attribute	string	Human-readable explanation of this value.	https://developer.hashicorp.com/nomad/docs/job-specification	
+terraform	root	terraform	block	block	Terraform configuration.	https://developer.hashicorp.com/terraform/language	terraform {\n  $CARET\n}
+terraform	root	moved	block	block	Moved configuration.	https://developer.hashicorp.com/terraform/language	moved {\n  $CARET\n}
+terraform	root	import	block	block	Import configuration.	https://developer.hashicorp.com/terraform/language	import {\n  $CARET\n}
+terraform	root	check	block	block	Check configuration.	https://developer.hashicorp.com/terraform/language	check "$CARET" {\n  \n}
+terraform	root	removed	block	block	Removed configuration.	https://developer.hashicorp.com/terraform/language	removed {\n  $CARET\n}
+terraform	root	provider	block	block	Provider configuration.	https://developer.hashicorp.com/terraform/language	provider "$CARET" {\n  \n}
+terraform	root	resource	block	block	Resource configuration.	https://developer.hashicorp.com/terraform/language	resource "$CARET" "name" {\n  \n}
+terraform	root	data	block	block	Data configuration.	https://developer.hashicorp.com/terraform/language	data "$CARET" "name" {\n  \n}
+terraform	root	module	block	block	Module configuration.	https://developer.hashicorp.com/terraform/language	module "$CARET" {\n  \n}
+terraform	root	output	block	block	Output configuration.	https://developer.hashicorp.com/terraform/language	output "$CARET" {\n  \n}
+terraform	terraform	required_version	attribute	string	Required version configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	terraform	required_providers	block	block	Required providers configuration.	https://developer.hashicorp.com/terraform/language	required_providers {\n  $CARET\n}
+terraform	terraform	backend	block	block	Backend configuration.	https://developer.hashicorp.com/terraform/language	backend "$CARET" {\n  \n}
+terraform	terraform	cloud	block	block	Cloud configuration.	https://developer.hashicorp.com/terraform/language	cloud {\n  $CARET\n}
+terraform	terraform/cloud	organization	attribute	string	Organization configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	terraform/cloud	hostname	attribute	string	Hostname configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	terraform/cloud	workspaces	block	block	Workspaces configuration.	https://developer.hashicorp.com/terraform/language	workspaces {\n  $CARET\n}
+terraform	terraform/cloud/workspaces	name	attribute	string	Name configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	terraform/cloud/workspaces	tags	attribute	list	Tags configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	variable:*	nullable	attribute	bool	Allow this input variable to have a null value.	https://developer.hashicorp.com/terraform/language	
+terraform	variable:*	ephemeral	attribute	bool	Ephemeral configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	output:*	value	attribute	expression	Value configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	output:*	description	attribute	string	Human-readable explanation of this value.	https://developer.hashicorp.com/terraform/language	
+terraform	output:*	sensitive	attribute	bool	Mark values as sensitive to reduce accidental display in output.	https://developer.hashicorp.com/terraform/language	
+terraform	output:*	depends_on	attribute	list	Explicit dependencies that must complete before this object.	https://developer.hashicorp.com/terraform/language	
+terraform	output:*	ephemeral	attribute	bool	Ephemeral configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	module:*	source	attribute	string	Source configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	module:*	version	attribute	string	Version configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	module:*	providers	attribute	map	Providers configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	module:*	count	attribute	expression	Number of instances to create.	https://developer.hashicorp.com/terraform/language	
+terraform	module:*	for_each	attribute	expression	Create one instance for each key or set member in this expression.	https://developer.hashicorp.com/terraform/language	
+terraform	module:*	depends_on	attribute	list	Explicit dependencies that must complete before this object.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*	provider	attribute	expression	Provider configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*	count	attribute	expression	Number of instances to create.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*	for_each	attribute	expression	Create one instance for each key or set member in this expression.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*	depends_on	attribute	list	Explicit dependencies that must complete before this object.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*	lifecycle	block	block	Lifecycle configuration.	https://developer.hashicorp.com/terraform/language	lifecycle {\n  $CARET\n}
+terraform	resource:*/lifecycle	precondition	block	block	Precondition configuration.	https://developer.hashicorp.com/terraform/language	precondition {\n  $CARET\n}
+terraform	resource:*/lifecycle/precondition	condition	attribute	expression	Boolean expression that must be true for this condition to pass.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*/lifecycle/precondition	error_message	attribute	string	Message shown when the condition evaluates to false.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*/lifecycle	postcondition	block	block	Postcondition configuration.	https://developer.hashicorp.com/terraform/language	postcondition {\n  $CARET\n}
+terraform	resource:*/lifecycle/postcondition	condition	attribute	expression	Boolean expression that must be true for this condition to pass.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*/lifecycle/postcondition	error_message	attribute	string	Message shown when the condition evaluates to false.	https://developer.hashicorp.com/terraform/language	
+terraform	data:*	provider	attribute	expression	Provider configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	data:*	count	attribute	expression	Number of instances to create.	https://developer.hashicorp.com/terraform/language	
+terraform	data:*	for_each	attribute	expression	Create one instance for each key or set member in this expression.	https://developer.hashicorp.com/terraform/language	
+terraform	data:*	depends_on	attribute	list	Explicit dependencies that must complete before this object.	https://developer.hashicorp.com/terraform/language	
+terraform	data:*	lifecycle	block	block	Lifecycle configuration.	https://developer.hashicorp.com/terraform/language	lifecycle {\n  $CARET\n}
+terraform	data:*/lifecycle	precondition	block	block	Precondition configuration.	https://developer.hashicorp.com/terraform/language	precondition {\n  $CARET\n}
+terraform	data:*/lifecycle/precondition	condition	attribute	expression	Boolean expression that must be true for this condition to pass.	https://developer.hashicorp.com/terraform/language	
+terraform	data:*/lifecycle/precondition	error_message	attribute	string	Message shown when the condition evaluates to false.	https://developer.hashicorp.com/terraform/language	
+terraform	data:*/lifecycle	postcondition	block	block	Postcondition configuration.	https://developer.hashicorp.com/terraform/language	postcondition {\n  $CARET\n}
+terraform	data:*/lifecycle/postcondition	condition	attribute	expression	Boolean expression that must be true for this condition to pass.	https://developer.hashicorp.com/terraform/language	
+terraform	data:*/lifecycle/postcondition	error_message	attribute	string	Message shown when the condition evaluates to false.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*/lifecycle	create_before_destroy	attribute	bool	Create a replacement before destroying the existing resource.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*/lifecycle	prevent_destroy	attribute	bool	Reject a plan that would destroy this resource.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*/lifecycle	ignore_changes	attribute	list	Resource attribute paths whose changes Terraform should ignore.	https://developer.hashicorp.com/terraform/language	
+terraform	resource:*/lifecycle	replace_triggered_by	attribute	list	Replace triggered by configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	moved	from	attribute	expression	From configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	moved	to	attribute	expression	To configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	import	to	attribute	expression	To configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	import	id	attribute	expression	Id configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	import	for_each	attribute	expression	Create one instance for each key or set member in this expression.	https://developer.hashicorp.com/terraform/language	
+terraform	removed	from	attribute	expression	From configuration.	https://developer.hashicorp.com/terraform/language	
+terraform	removed	lifecycle	block	block	Lifecycle configuration.	https://developer.hashicorp.com/terraform/language	lifecycle {\n  $CARET\n}
+terraform	removed/lifecycle	destroy	attribute	bool	Destroy configuration.	https://developer.hashicorp.com/terraform/language	
+packer	root	packer	block	block	Packer configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	packer {\n  $CARET\n}
+packer	root	source	block	block	Source configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	source "$CARET" "name" {\n  \n}
+packer	root	build	block	block	Build configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	build {\n  $CARET\n}
+packer	root	data	block	block	Data configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	data "$CARET" "name" {\n  \n}
+packer	root	local	block	block	Local configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	local "$CARET" {\n  \n}
+packer	packer	required_version	attribute	string	Required version configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	packer	required_plugins	block	block	Required plugins configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	required_plugins {\n  $CARET\n}
+packer	local:*	expression	attribute	expression	Expression configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	local:*	sensitive	attribute	bool	Mark values as sensitive to reduce accidental display in output.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build	name	attribute	string	Name configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build	description	attribute	string	Human-readable explanation of this value.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build	sources	attribute	list	Source references for this build, such as source.amazon-ebs.ubuntu.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build	source	block	block	Source configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	source "$CARET" {\n  \n}
+packer	build	provisioner	block	block	Provisioner configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	provisioner "$CARET" {\n  \n}
+packer	build	post-processor	block	block	Post-processor configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	post-processor "$CARET" {\n  \n}
+packer	build	post-processors	block	block	Post-processors configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	post-processors {\n  $CARET\n}
+packer	build/post-processors	post-processor	block	block	Post-processor configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	post-processor "$CARET" {\n  \n}
+packer	build/source:*	name	attribute	string	Name configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	communicator	attribute	enum:ssh,winrm,none	Connection mechanism used to communicate with the build machine.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	ssh_username	attribute	string	Login user for the SSH communicator; must match the base image user.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	ssh_password	attribute	string	Ssh password configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	ssh_private_key_file	attribute	string	Path to the private key used for SSH authentication.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	ssh_port	attribute	number	Ssh port configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	ssh_timeout	attribute	string	Maximum time to wait for SSH connectivity, expressed as a duration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	ssh_host	attribute	string	Ssh host configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	ssh_bastion_host	attribute	string	Ssh bastion host configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	ssh_bastion_username	attribute	string	Ssh bastion username configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	ssh_agent_auth	attribute	bool	Ssh agent auth configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	winrm_username	attribute	string	Winrm username configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	winrm_password	attribute	string	Winrm password configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	winrm_port	attribute	number	Winrm port configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	winrm_timeout	attribute	string	Winrm timeout configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	winrm_use_ssl	attribute	bool	Winrm use ssl configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:*	winrm_insecure	attribute	bool	Winrm insecure configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	communicator	attribute	string	Connection mechanism used to communicate with the build machine.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	ssh_username	attribute	string	Login user for the SSH communicator; must match the base image user.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	ssh_password	attribute	string	Ssh password configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	ssh_private_key_file	attribute	string	Path to the private key used for SSH authentication.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	ssh_port	attribute	number	Ssh port configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	ssh_timeout	attribute	string	Maximum time to wait for SSH connectivity, expressed as a duration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	ssh_host	attribute	string	Ssh host configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	ssh_bastion_host	attribute	string	Ssh bastion host configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	ssh_bastion_username	attribute	string	Ssh bastion username configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	ssh_agent_auth	attribute	bool	Ssh agent auth configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	winrm_username	attribute	string	Winrm username configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	winrm_password	attribute	string	Winrm password configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	winrm_port	attribute	number	Winrm port configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	winrm_timeout	attribute	string	Winrm timeout configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	winrm_use_ssl	attribute	bool	Winrm use ssl configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/source:*	winrm_insecure	attribute	bool	Winrm insecure configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	region	attribute	string	AWS region in which Packer launches the temporary build instance.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	ami_name	attribute	string	Name of the new Amazon Machine Image. Use a unique name for each build.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	instance_type	attribute	string	EC2 instance type used while building the image, for example t3.small.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	source_ami	attribute	string	Base AMI ID to build from. Alternatively configure source_ami_filter.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	ami_description	attribute	string	Ami description configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	ami_regions	attribute	list	Ami regions configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	subnet_id	attribute	string	Subnet id configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	vpc_id	attribute	string	Vpc id configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	associate_public_ip_address	attribute	bool	Associate public ip address configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	security_group_id	attribute	string	Security group id configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	security_group_ids	attribute	list	Security group ids configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	tags	attribute	map	Tags configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	run_tags	attribute	map	Run tags configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	profile	attribute	string	Profile configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	access_key	attribute	string	Access key configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	secret_key	attribute	string	Secret key configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	token	attribute	string	Token configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	temporary_key_pair_name	attribute	string	Temporary key pair name configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	source_ami_filter	block	block	Source ami filter configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	source_ami_filter {\n  $CARET\n}
+packer	source:amazon-ebs/source_ami_filter	filters	attribute	map	Filters configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs/source_ami_filter	owners	attribute	list	Trusted AWS account IDs or aliases used when selecting an AMI.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs/source_ami_filter	most_recent	attribute	bool	Select the most recent AMI matching the configured filters.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs	launch_block_device_mappings	block	block	Launch block device mappings configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	launch_block_device_mappings {\n  $CARET\n}
+packer	source:amazon-ebs/launch_block_device_mappings	device_name	attribute	string	Device name configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs/launch_block_device_mappings	volume_size	attribute	number	Volume size configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs/launch_block_device_mappings	volume_type	attribute	string	Volume type configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs/launch_block_device_mappings	delete_on_termination	attribute	bool	Delete on termination configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs/launch_block_device_mappings	encrypted	attribute	bool	Encrypted configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:amazon-ebs/launch_block_device_mappings	iops	attribute	number	Iops configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:docker	image	attribute	string	Image configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:docker	commit	attribute	bool	Commit configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:docker	discard	attribute	bool	Discard configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:docker	pull	attribute	bool	Pull configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:docker	changes	attribute	list	Changes configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:docker	run_command	attribute	list	Run command configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:docker	export_path	attribute	string	Export path configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	iso_url	attribute	string	Iso url configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	iso_checksum	attribute	string	Iso checksum configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	accelerator	attribute	string	Accelerator configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	format	attribute	string	Format configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	disk_size	attribute	string	Disk size configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	output_directory	attribute	string	Output directory configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	headless	attribute	bool	Headless configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	memory	attribute	number	Requested memory in MiB.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	cpus	attribute	number	Cpus configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	boot_command	attribute	list	Boot command configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	boot_wait	attribute	string	Boot wait configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	http_directory	attribute	string	Http directory configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	shutdown_command	attribute	string	Shutdown command configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:qemu	vm_name	attribute	string	Vm name configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	iso_url	attribute	string	Iso url configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	iso_checksum	attribute	string	Iso checksum configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	guest_os_type	attribute	string	Guest os type configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	vm_name	attribute	string	Vm name configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	headless	attribute	bool	Headless configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	memory	attribute	number	Requested memory in MiB.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	cpus	attribute	number	Cpus configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	disk_size	attribute	number	Disk size configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	boot_command	attribute	list	Boot command configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	boot_wait	attribute	string	Boot wait configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	http_directory	attribute	string	Http directory configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	shutdown_command	attribute	string	Shutdown command configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	source:virtualbox-iso	output_directory	attribute	string	Output directory configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	inline	attribute	list	Commands executed in order by the provisioner.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	script	attribute	string	Script configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	scripts	attribute	list	Paths to scripts executed by the provisioner.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	environment_vars	attribute	list	Environment vars configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	execute_command	attribute	string	Execute command configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	inline_shebang	attribute	string	Inline shebang configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	pause_before	attribute	string	Pause before configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	timeout	attribute	string	Timeout configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	only	attribute	list	Restrict this provisioner or post-processor to the listed builds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	except	attribute	list	Skip this provisioner or post-processor for the listed builds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell	valid_exit_codes	attribute	list	Valid exit codes configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	inline	attribute	list	Commands executed in order by the provisioner.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	script	attribute	string	Script configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	scripts	attribute	list	Paths to scripts executed by the provisioner.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	environment_vars	attribute	list	Environment vars configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	execute_command	attribute	string	Execute command configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	inline_shebang	attribute	string	Inline shebang configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	pause_before	attribute	string	Pause before configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	timeout	attribute	string	Timeout configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	only	attribute	list	Restrict this provisioner or post-processor to the listed builds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	except	attribute	list	Skip this provisioner or post-processor for the listed builds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:powershell	valid_exit_codes	attribute	list	Valid exit codes configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	inline	attribute	list	Commands executed in order by the provisioner.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	script	attribute	string	Script configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	scripts	attribute	list	Paths to scripts executed by the provisioner.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	environment_vars	attribute	list	Environment vars configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	execute_command	attribute	string	Execute command configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	inline_shebang	attribute	string	Inline shebang configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	pause_before	attribute	string	Pause before configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	timeout	attribute	string	Timeout configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	only	attribute	list	Restrict this provisioner or post-processor to the listed builds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	except	attribute	list	Skip this provisioner or post-processor for the listed builds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:shell-local	valid_exit_codes	attribute	list	Valid exit codes configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:file	source	attribute	string	Source configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:file	destination	attribute	string	Destination path for the generated or transferred file.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:file	direction	attribute	string	Direction configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:file	generated	attribute	bool	Generated configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:file	only	attribute	list	Restrict this provisioner or post-processor to the listed builds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:file	except	attribute	list	Skip this provisioner or post-processor for the listed builds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:ansible	playbook_file	attribute	string	Playbook file configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:ansible	user	attribute	string	User configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:ansible	extra_arguments	attribute	list	Extra arguments configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:ansible	ansible_env_vars	attribute	list	Ansible env vars configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:ansible	use_proxy	attribute	bool	Use proxy configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:ansible	inventory_file	attribute	string	Inventory file configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:ansible	groups	attribute	list	Groups configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:ansible	only	attribute	list	Restrict this provisioner or post-processor to the listed builds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/provisioner:ansible	except	attribute	list	Skip this provisioner or post-processor for the listed builds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processor:manifest	output	attribute	string	Output configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processor:manifest	strip_path	attribute	bool	Strip path configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processor:manifest	custom_data	attribute	map	Custom data configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processors/post-processor:manifest	output	attribute	string	Output configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processors/post-processor:manifest	strip_path	attribute	bool	Strip path configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processors/post-processor:manifest	custom_data	attribute	map	Custom data configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processor:shell-local	inline	attribute	list	Commands executed in order by the provisioner.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processor:shell-local	script	attribute	string	Script configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processor:shell-local	scripts	attribute	list	Paths to scripts executed by the provisioner.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processor:shell-local	environment_vars	attribute	list	Environment vars configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processors/post-processor:shell-local	inline	attribute	list	Commands executed in order by the provisioner.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processors/post-processor:shell-local	script	attribute	string	Script configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processors/post-processor:shell-local	scripts	attribute	list	Paths to scripts executed by the provisioner.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+packer	build/post-processors/post-processor:shell-local	environment_vars	attribute	list	Environment vars configuration.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates	
+nomad	root	job	block	block	Job configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	job "$CARET" {\n  \n}
+nomad	job:*	region	attribute	string	AWS region in which Packer launches the temporary build instance.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*	namespace	attribute	string	Nomad namespace containing this job.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*	type	attribute	enum:service,batch,system,sysbatch	Scheduling model: service, batch, system, or sysbatch.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*	priority	attribute	number	Priority configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*	datacenters	attribute	list	Nomad datacenters eligible to run this job.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*	node_pool	attribute	string	Node pool configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*	all_at_once	attribute	bool	All at once configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*	group	block	block	Group configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	group "$CARET" {\n  \n}
+nomad	job:*	constraint	block	block	Constraint configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	constraint {\n  $CARET\n}
+nomad	job:*	affinity	block	block	Affinity configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	affinity {\n  $CARET\n}
+nomad	job:*	spread	block	block	Spread configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	spread {\n  $CARET\n}
+nomad	job:*	update	block	block	Update configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	update {\n  $CARET\n}
+nomad	job:*	periodic	block	block	Periodic configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	periodic {\n  $CARET\n}
+nomad	job:*	parameterized	block	block	Parameterized configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	parameterized {\n  $CARET\n}
+nomad	job:*	reschedule	block	block	Reschedule configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	reschedule {\n  $CARET\n}
+nomad	job:*	migrate	block	block	Migrate configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	migrate {\n  $CARET\n}
+nomad	job:*	meta	block	block	Meta configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	meta {\n  $CARET\n}
+nomad	job:*/periodic	cron	attribute	string	Cron configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/periodic	crons	attribute	list	Crons configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/periodic	time_zone	attribute	string	Time zone configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/periodic	prohibit_overlap	attribute	bool	Prohibit overlap configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/parameterized	payload	attribute	string	Payload configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/parameterized	meta_required	attribute	list	Meta required configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/parameterized	meta_optional	attribute	list	Meta optional configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*	count	attribute	number	Number of instances to create.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*	shutdown_delay	attribute	string	Shutdown delay configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*	task	block	block	Task configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	task "$CARET" {\n  \n}
+nomad	job:*/group:*	network	block	block	Network configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	network {\n  $CARET\n}
+nomad	job:*/group:*	service	block	block	Service configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	service {\n  $CARET\n}
+nomad	job:*/group:*	volume	block	block	Volume configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	volume "$CARET" {\n  \n}
+nomad	job:*/group:*	restart	block	block	Restart configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	restart {\n  $CARET\n}
+nomad	job:*/group:*	reschedule	block	block	Reschedule configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	reschedule {\n  $CARET\n}
+nomad	job:*/group:*	update	block	block	Update configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	update {\n  $CARET\n}
+nomad	job:*/group:*	constraint	block	block	Constraint configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	constraint {\n  $CARET\n}
+nomad	job:*/group:*	affinity	block	block	Affinity configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	affinity {\n  $CARET\n}
+nomad	job:*/group:*	ephemeral_disk	block	block	Ephemeral disk configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	ephemeral_disk {\n  $CARET\n}
+nomad	job:*/group:*	scaling	block	block	Scaling configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	scaling {\n  $CARET\n}
+nomad	job:*/group:*	meta	block	block	Meta configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	meta {\n  $CARET\n}
+nomad	job:*/group:*/network	mode	attribute	string	Mode configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/network	mbits	attribute	number	Mbits configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/network	dns	attribute	map	Dns configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/network	port	block	block	Port configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	port "$CARET" {\n  \n}
+nomad	job:*/group:*/network/port:*	static	attribute	number	Static configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/network/port:*	to	attribute	number	To configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/network/port:*	host_network	attribute	string	Host network configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/volume:*	type	attribute	string	Type configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/volume:*	source	attribute	string	Source configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/volume:*	read_only	attribute	bool	Read only configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/volume:*	access_mode	attribute	string	Access mode configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/volume:*	attachment_mode	attribute	string	Attachment mode configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/ephemeral_disk	size	attribute	number	Size configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/ephemeral_disk	sticky	attribute	bool	Sticky configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/ephemeral_disk	migrate	attribute	bool	Migrate configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*	driver	attribute	enum:docker,exec,raw_exec,java,qemu	Task driver used to execute this task. The config body depends on the driver.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*	user	attribute	string	User configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*	kill_timeout	attribute	string	Kill timeout configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*	kill_signal	attribute	string	Kill signal configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*	shutdown_delay	attribute	string	Shutdown delay configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*	leader	attribute	bool	Leader configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*	config	block	block	Config configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	config {\n  $CARET\n}
+nomad	job:*/group:*/task:*	env	block	block	Env configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	env {\n  $CARET\n}
+nomad	job:*/group:*/task:*	resources	block	block	Resources configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	resources {\n  $CARET\n}
+nomad	job:*/group:*/task:*	service	block	block	Service configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	service {\n  $CARET\n}
+nomad	job:*/group:*/task:*	template	block	block	Template configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	template {\n  $CARET\n}
+nomad	job:*/group:*/task:*	artifact	block	block	Artifact configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	artifact {\n  $CARET\n}
+nomad	job:*/group:*/task:*	vault	block	block	Vault configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	vault {\n  $CARET\n}
+nomad	job:*/group:*/task:*	identity	block	block	Identity configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	identity {\n  $CARET\n}
+nomad	job:*/group:*/task:*	logs	block	block	Logs configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	logs {\n  $CARET\n}
+nomad	job:*/group:*/task:*	volume_mount	block	block	Volume mount configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	volume_mount {\n  $CARET\n}
+nomad	job:*/group:*/task:*	lifecycle	block	block	Lifecycle configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	lifecycle {\n  $CARET\n}
+nomad	job:*/group:*/task:*	constraint	block	block	Constraint configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	constraint {\n  $CARET\n}
+nomad	job:*/group:*/task:*	meta	block	block	Meta configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	meta {\n  $CARET\n}
+nomad	job:*/group:*/task:*/config:docker	image	attribute	string	Image configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/config:docker	command	attribute	string	Command configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/config:docker	args	attribute	list	Args configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/config:docker	ports	attribute	list	Ports configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/config:docker	volumes	attribute	list	Volumes configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/config:docker	privileged	attribute	bool	Privileged configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/config:docker	force_pull	attribute	bool	Force pull configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/config:docker	entrypoint	attribute	list	Entrypoint configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/config:docker	work_dir	attribute	string	Work dir configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/resources	cpu	attribute	number	Requested CPU capacity in MHz.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/resources	cores	attribute	number	Cores configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/resources	memory	attribute	number	Requested memory in MiB.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/resources	memory_max	attribute	number	Maximum memory in MiB for supported task drivers.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/resources	disk	attribute	number	Disk configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	data	attribute	string	Data configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	source	attribute	string	Source configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	destination	attribute	string	Destination path for the generated or transferred file.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	change_mode	attribute	string	Action to take when a rendered template changes.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	change_signal	attribute	string	Change signal configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	perms	attribute	string	Perms configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	env	attribute	bool	Env configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	splay	attribute	string	Splay configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	left_delimiter	attribute	string	Left delimiter configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	right_delimiter	attribute	string	Right delimiter configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/template	error_on_missing_key	attribute	bool	Error on missing key configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/artifact	source	attribute	string	Source configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/artifact	destination	attribute	string	Destination path for the generated or transferred file.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/artifact	mode	attribute	string	Mode configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/artifact	options	block	block	Options configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	options {\n  $CARET\n}
+nomad	job:*/group:*/task:*/vault	policies	attribute	list	Policies configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/vault	role	attribute	string	Role configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/vault	change_mode	attribute	string	Action to take when a rendered template changes.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/vault	change_signal	attribute	string	Change signal configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/vault	env	attribute	bool	Env configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/vault	disable_file	attribute	bool	Disable file configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/logs	max_files	attribute	number	Max files configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/logs	max_file_size	attribute	number	Max file size configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/logs	disabled	attribute	bool	Disabled configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/volume_mount	volume	attribute	string	Volume configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/volume_mount	destination	attribute	string	Destination path for the generated or transferred file.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/volume_mount	read_only	attribute	bool	Read only configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/volume_mount	propagation_mode	attribute	string	Propagation mode configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/lifecycle	hook	attribute	string	Hook configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/lifecycle	sidecar	attribute	bool	Sidecar configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	name	attribute	string	Name configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	port	attribute	string	Port configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	provider	attribute	string	Provider configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	address	attribute	string	Address configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	address_mode	attribute	string	Address mode configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	tags	attribute	list	Tags configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	canary_tags	attribute	list	Canary tags configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	enable_tag_override	attribute	bool	Enable tag override configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	task	attribute	string	Task configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	check	block	block	Check configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	check {\n  $CARET\n}
+nomad	job:*/group:*/service/check	name	attribute	string	Name configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/check	type	attribute	string	Type configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/check	path	attribute	string	Path configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/check	port	attribute	string	Port configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/check	interval	attribute	string	Interval configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/check	timeout	attribute	string	Timeout configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/check	method	attribute	string	Method configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/check	command	attribute	string	Command configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/check	args	attribute	list	Args configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/check	tls_skip_verify	attribute	bool	Tls skip verify configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/check	initial_status	attribute	string	Initial status configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service	connect	block	block	Connect configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	connect {\n  $CARET\n}
+nomad	job:*/group:*/service/connect	sidecar_service	block	block	Sidecar service configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	sidecar_service {\n  $CARET\n}
+nomad	job:*/group:*/service/connect/sidecar_service	proxy	block	block	Proxy configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	proxy {\n  $CARET\n}
+nomad	job:*/group:*/service/connect/sidecar_service/proxy	upstreams	block	block	Upstreams configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	upstreams {\n  $CARET\n}
+nomad	job:*/group:*/service/connect/sidecar_service/proxy/upstreams	destination_name	attribute	string	Destination name configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/service/connect/sidecar_service/proxy/upstreams	local_bind_port	attribute	number	Local bind port configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	name	attribute	string	Name configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	port	attribute	string	Port configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	provider	attribute	string	Provider configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	address	attribute	string	Address configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	address_mode	attribute	string	Address mode configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	tags	attribute	list	Tags configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	canary_tags	attribute	list	Canary tags configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	enable_tag_override	attribute	bool	Enable tag override configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	task	attribute	string	Task configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	check	block	block	Check configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	check {\n  $CARET\n}
+nomad	job:*/group:*/task:*/service/check	name	attribute	string	Name configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/check	type	attribute	string	Type configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/check	path	attribute	string	Path configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/check	port	attribute	string	Port configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/check	interval	attribute	string	Interval configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/check	timeout	attribute	string	Timeout configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/check	method	attribute	string	Method configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/check	command	attribute	string	Command configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/check	args	attribute	list	Args configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/check	tls_skip_verify	attribute	bool	Tls skip verify configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/check	initial_status	attribute	string	Initial status configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service	connect	block	block	Connect configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	connect {\n  $CARET\n}
+nomad	job:*/group:*/task:*/service/connect	sidecar_service	block	block	Sidecar service configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	sidecar_service {\n  $CARET\n}
+nomad	job:*/group:*/task:*/service/connect/sidecar_service	proxy	block	block	Proxy configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	proxy {\n  $CARET\n}
+nomad	job:*/group:*/task:*/service/connect/sidecar_service/proxy	upstreams	block	block	Upstreams configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	upstreams {\n  $CARET\n}
+nomad	job:*/group:*/task:*/service/connect/sidecar_service/proxy/upstreams	destination_name	attribute	string	Destination name configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/service/connect/sidecar_service/proxy/upstreams	local_bind_port	attribute	number	Local bind port configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/constraint	attribute	attribute	expression	Attribute configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/constraint	operator	attribute	string	Operator configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/constraint	value	attribute	string	Value configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/constraint	weight	attribute	number	Weight configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/constraint	attribute	attribute	expression	Attribute configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/constraint	operator	attribute	string	Operator configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/constraint	value	attribute	string	Value configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/constraint	weight	attribute	number	Weight configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/constraint	attribute	attribute	expression	Attribute configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/constraint	operator	attribute	string	Operator configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/constraint	value	attribute	string	Value configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/task:*/constraint	weight	attribute	number	Weight configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/affinity	attribute	attribute	expression	Attribute configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/affinity	operator	attribute	string	Operator configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/affinity	value	attribute	string	Value configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/affinity	weight	attribute	number	Weight configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/affinity	attribute	attribute	expression	Attribute configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/affinity	operator	attribute	string	Operator configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/affinity	value	attribute	string	Value configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/affinity	weight	attribute	number	Weight configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/update	max_parallel	attribute	number	Max parallel configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/update	health_check	attribute	string	Health check configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/update	min_healthy_time	attribute	string	Min healthy time configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/update	healthy_deadline	attribute	string	Healthy deadline configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/update	progress_deadline	attribute	string	Progress deadline configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/update	auto_revert	attribute	bool	Auto revert configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/update	auto_promote	attribute	bool	Auto promote configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/update	canary	attribute	number	Canary configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/update	stagger	attribute	string	Stagger configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/update	max_parallel	attribute	number	Max parallel configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/update	health_check	attribute	string	Health check configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/update	min_healthy_time	attribute	string	Min healthy time configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/update	healthy_deadline	attribute	string	Healthy deadline configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/update	progress_deadline	attribute	string	Progress deadline configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/update	auto_revert	attribute	bool	Auto revert configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/update	auto_promote	attribute	bool	Auto promote configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/update	canary	attribute	number	Canary configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/update	stagger	attribute	string	Stagger configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/restart	attempts	attribute	number	Attempts configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/restart	interval	attribute	string	Interval configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/restart	delay	attribute	string	Delay configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/restart	mode	attribute	string	Mode configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/reschedule	attempts	attribute	number	Attempts configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/reschedule	interval	attribute	string	Interval configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/reschedule	delay	attribute	string	Delay configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/reschedule	delay_function	attribute	string	Delay function configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/reschedule	max_delay	attribute	string	Max delay configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/reschedule	unlimited	attribute	bool	Unlimited configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/reschedule	attempts	attribute	number	Attempts configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/reschedule	interval	attribute	string	Interval configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/reschedule	delay	attribute	string	Delay configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/reschedule	delay_function	attribute	string	Delay function configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/reschedule	max_delay	attribute	string	Max delay configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+nomad	job:*/group:*/reschedule	unlimited	attribute	bool	Unlimited configuration.	https://developer.hashicorp.com/nomad/docs/job-specification	
+consul	root	datacenter	attribute	string	Datacenter configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	primary_datacenter	attribute	string	Primary datacenter configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	node_name	attribute	string	Node name configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	node_id	attribute	string	Node id configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	data_dir	attribute	string	Data dir configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	server	attribute	bool	Server configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	bootstrap_expect	attribute	number	Number of Consul servers expected before initial cluster bootstrap.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	bind_addr	attribute	string	Address used for Consul internal cluster communication.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	advertise_addr	attribute	string	Advertise addr configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	client_addr	attribute	string	Address on which Consul exposes client interfaces.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	retry_join	attribute	list	Addresses or discovery expressions used to find other Consul agents.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	retry_join_wan	attribute	list	Retry join wan configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	encrypt	attribute	string	Encrypt configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	log_level	attribute	string	Log level configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	log_json	attribute	bool	Log json configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	leave_on_terminate	attribute	bool	Leave on terminate configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	enable_script_checks	attribute	bool	Enable script checks configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	enable_local_script_checks	attribute	bool	Enable local script checks configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	disable_update_check	attribute	bool	Disable update check configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	ui	attribute	bool	Ui configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	root	acl	block	block	Acl configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	acl {\n  $CARET\n}
+consul	root	connect	block	block	Connect configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	connect {\n  $CARET\n}
+consul	root	ports	block	block	Ports configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	ports {\n  $CARET\n}
+consul	root	addresses	block	block	Addresses configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	addresses {\n  $CARET\n}
+consul	root	telemetry	block	block	Telemetry configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	telemetry {\n  $CARET\n}
+consul	root	ui_config	block	block	Ui config configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	ui_config {\n  $CARET\n}
+consul	root	tls	block	block	Tls configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	tls {\n  $CARET\n}
+consul	root	service	block	block	Service configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	service {\n  $CARET\n}
+consul	root	check	block	block	Check configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	check {\n  $CARET\n}
+consul	root	auto_encrypt	block	block	Auto encrypt configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	auto_encrypt {\n  $CARET\n}
+consul	root	performance	block	block	Performance configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	performance {\n  $CARET\n}
+consul	root	dns_config	block	block	Dns config configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	dns_config {\n  $CARET\n}
+consul	acl	enabled	attribute	bool	Enabled configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	acl	default_policy	attribute	enum:allow,deny	ACL decision for requests that do not match an explicit policy.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	acl	down_policy	attribute	enum:extend-cache,async-cache,allow,deny	Down policy configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	acl	enable_token_persistence	attribute	bool	Enable token persistence configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	acl	tokens	block	block	Tokens configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	tokens {\n  $CARET\n}
+consul	acl/tokens	default	attribute	string	Fallback input value used when no value is supplied.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	acl/tokens	agent	attribute	string	Agent configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	acl/tokens	initial_management	attribute	string	Initial management configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	acl/tokens	agent_recovery	attribute	string	Agent recovery configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	acl/tokens	replication	attribute	string	Replication configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	connect	enabled	attribute	bool	Enabled configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ports	http	attribute	number	Http configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ports	https	attribute	number	Https configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ports	grpc	attribute	number	Grpc configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ports	grpc_tls	attribute	number	Grpc tls configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ports	dns	attribute	number	Dns configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ports	server	attribute	number	Server configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ports	serf_lan	attribute	number	Serf lan configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ports	serf_wan	attribute	number	Serf wan configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	addresses	http	attribute	string	Http configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	addresses	https	attribute	string	Https configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	addresses	grpc	attribute	string	Grpc configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	addresses	dns	attribute	string	Dns configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	telemetry	prometheus_retention_time	attribute	string	Prometheus retention time configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	telemetry	disable_hostname	attribute	bool	Disable hostname configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	telemetry	statsd_address	attribute	string	Statsd address configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	telemetry	dogstatsd_addr	attribute	string	Dogstatsd addr configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	telemetry	metrics_prefix	attribute	string	Metrics prefix configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ui_config	enabled	attribute	bool	Enabled configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ui_config	content_path	attribute	string	Content path configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	ui_config	dir	attribute	string	Dir configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	auto_encrypt	allow_tls	attribute	bool	Allow tls configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	auto_encrypt	tls	attribute	bool	Tls configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	auto_encrypt	dns_sans	attribute	list	Dns sans configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	auto_encrypt	ip_sans	attribute	list	Ip sans configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls	defaults	block	block	Defaults configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	defaults {\n  $CARET\n}
+consul	tls/defaults	ca_file	attribute	string	Ca file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/defaults	ca_path	attribute	string	Ca path configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/defaults	cert_file	attribute	string	Cert file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/defaults	key_file	attribute	string	Key file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/defaults	verify_incoming	attribute	bool	Verify incoming configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/defaults	verify_outgoing	attribute	bool	Verify outgoing configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/defaults	verify_server_hostname	attribute	bool	Verify server hostname configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/defaults	tls_min_version	attribute	string	Tls min version configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls	internal_rpc	block	block	Internal rpc configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	internal_rpc {\n  $CARET\n}
+consul	tls/internal_rpc	ca_file	attribute	string	Ca file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/internal_rpc	ca_path	attribute	string	Ca path configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/internal_rpc	cert_file	attribute	string	Cert file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/internal_rpc	key_file	attribute	string	Key file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/internal_rpc	verify_incoming	attribute	bool	Verify incoming configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/internal_rpc	verify_outgoing	attribute	bool	Verify outgoing configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/internal_rpc	verify_server_hostname	attribute	bool	Verify server hostname configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/internal_rpc	tls_min_version	attribute	string	Tls min version configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls	https	block	block	Https configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	https {\n  $CARET\n}
+consul	tls/https	ca_file	attribute	string	Ca file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/https	ca_path	attribute	string	Ca path configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/https	cert_file	attribute	string	Cert file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/https	key_file	attribute	string	Key file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/https	verify_incoming	attribute	bool	Verify incoming configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/https	verify_outgoing	attribute	bool	Verify outgoing configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/https	verify_server_hostname	attribute	bool	Verify server hostname configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/https	tls_min_version	attribute	string	Tls min version configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls	grpc	block	block	Grpc configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	grpc {\n  $CARET\n}
+consul	tls/grpc	ca_file	attribute	string	Ca file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/grpc	ca_path	attribute	string	Ca path configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/grpc	cert_file	attribute	string	Cert file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/grpc	key_file	attribute	string	Key file configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/grpc	verify_incoming	attribute	bool	Verify incoming configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/grpc	verify_outgoing	attribute	bool	Verify outgoing configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/grpc	verify_server_hostname	attribute	bool	Verify server hostname configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	tls/grpc	tls_min_version	attribute	string	Tls min version configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service	name	attribute	string	Name configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service	id	attribute	string	Id configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service	address	attribute	string	Address configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service	port	attribute	number	Port configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service	tags	attribute	list	Tags configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service	meta	attribute	map	Meta configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service	enable_tag_override	attribute	bool	Enable tag override configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service	check	block	block	Check configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	check {\n  $CARET\n}
+consul	service	connect	block	block	Connect configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	connect {\n  $CARET\n}
+consul	service/connect	sidecar_service	block	block	Sidecar service configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	sidecar_service {\n  $CARET\n}
+consul	check	id	attribute	string	Id configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	check	name	attribute	string	Name configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	check	http	attribute	string	Http configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	check	tcp	attribute	string	Tcp configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	check	grpc	attribute	string	Grpc configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	check	interval	attribute	string	Interval configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	check	timeout	attribute	string	Timeout configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	check	args	attribute	list	Args configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	check	tls_skip_verify	attribute	bool	Tls skip verify configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	check	deregister_critical_service_after	attribute	string	Deregister critical service after configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service/check	id	attribute	string	Id configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service/check	name	attribute	string	Name configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service/check	http	attribute	string	Http configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service/check	tcp	attribute	string	Tcp configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service/check	grpc	attribute	string	Grpc configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service/check	interval	attribute	string	Interval configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service/check	timeout	attribute	string	Timeout configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service/check	args	attribute	list	Args configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service/check	tls_skip_verify	attribute	bool	Tls skip verify configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	service/check	deregister_critical_service_after	attribute	string	Deregister critical service after configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	performance	raft_multiplier	attribute	number	Raft multiplier configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	performance	leave_drain_time	attribute	string	Leave drain time configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	performance	rpc_hold_timeout	attribute	string	Rpc hold timeout configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	dns_config	allow_stale	attribute	bool	Allow stale configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	dns_config	max_stale	attribute	string	Max stale configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	dns_config	node_ttl	attribute	string	Node ttl configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	dns_config	service_ttl	attribute	map	Service ttl configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+consul	dns_config	only_passing	attribute	bool	Only passing configuration.	https://developer.hashicorp.com/consul/docs/agent/config/config-files	
+terraform	expression	length	function	collection	Return the number of elements or characters.	https://developer.hashicorp.com/terraform/language/functions/length	length($CARET)
+terraform	expression	concat	function	lists...	Join lists in order.	https://developer.hashicorp.com/terraform/language/functions/concat	concat($CARET)
+terraform	expression	merge	function	maps...	Combine maps; later keys override earlier keys.	https://developer.hashicorp.com/terraform/language/functions/merge	merge($CARET)
+terraform	expression	lookup	function	map, key, default	Read a map entry with a fallback.	https://developer.hashicorp.com/terraform/language/functions/lookup	lookup($CARET)
+terraform	expression	coalesce	function	values...	Choose the first non-null, nonempty value.	https://developer.hashicorp.com/terraform/language/functions/coalesce	coalesce($CARET)
+terraform	expression	try	function	expressions...	Return the first expression that succeeds.	https://developer.hashicorp.com/terraform/language/functions/try	try($CARET)
+terraform	expression	can	function	expression	Test whether evaluating an expression succeeds.	https://developer.hashicorp.com/terraform/language/functions/can	can($CARET)
+terraform	expression	jsonencode	function	value	Serialize a value as JSON.	https://developer.hashicorp.com/terraform/language/functions/jsonencode	jsonencode($CARET)
+terraform	expression	jsondecode	function	text	Parse JSON into an HCL value.	https://developer.hashicorp.com/terraform/language/functions/jsondecode	jsondecode($CARET)
+terraform	expression	file	function	path	Read a UTF-8 file.	https://developer.hashicorp.com/terraform/language/functions/file	file($CARET)
+terraform	expression	templatefile	function	path, vars	Render a template with named variables.	https://developer.hashicorp.com/terraform/language/functions/templatefile	templatefile($CARET)
+terraform	expression	format	function	format, args...	Format values as text.	https://developer.hashicorp.com/terraform/language/functions/format	format($CARET)
+terraform	expression	join	function	separator, list	Join strings with a separator.	https://developer.hashicorp.com/terraform/language/functions/join	join($CARET)
+terraform	expression	split	function	separator, text	Split text into a list.	https://developer.hashicorp.com/terraform/language/functions/split	split($CARET)
+terraform	expression	replace	function	text, search, replacement	Replace matching text.	https://developer.hashicorp.com/terraform/language/functions/replace	replace($CARET)
+terraform	expression	lower	function	text	Convert text to lowercase.	https://developer.hashicorp.com/terraform/language/functions/lower	lower($CARET)
+terraform	expression	upper	function	text	Convert text to uppercase.	https://developer.hashicorp.com/terraform/language/functions/upper	upper($CARET)
+terraform	expression	trimspace	function	text	Remove surrounding whitespace.	https://developer.hashicorp.com/terraform/language/functions/trimspace	trimspace($CARET)
+terraform	expression	toset	function	value	Convert a collection to a set.	https://developer.hashicorp.com/terraform/language/functions/toset	toset($CARET)
+terraform	expression	tolist	function	value	Convert a value to a list.	https://developer.hashicorp.com/terraform/language/functions/tolist	tolist($CARET)
+terraform	expression	tomap	function	value	Convert a value to a map.	https://developer.hashicorp.com/terraform/language/functions/tomap	tomap($CARET)
+terraform	expression	tostring	function	value	Convert a value to a string.	https://developer.hashicorp.com/terraform/language/functions/tostring	tostring($CARET)
+terraform	expression	tonumber	function	value	Convert a value to a number.	https://developer.hashicorp.com/terraform/language/functions/tonumber	tonumber($CARET)
+terraform	expression	tobool	function	value	Convert a value to a boolean.	https://developer.hashicorp.com/terraform/language/functions/tobool	tobool($CARET)
+terraform	expression	keys	function	map	Return the keys of a map.	https://developer.hashicorp.com/terraform/language/functions/keys	keys($CARET)
+terraform	expression	values	function	map	Return the values of a map.	https://developer.hashicorp.com/terraform/language/functions/values	values($CARET)
+terraform	expression	contains	function	collection, value	Test collection membership.	https://developer.hashicorp.com/terraform/language/functions/contains	contains($CARET)
+terraform	expression	flatten	function	list	Flatten nested lists.	https://developer.hashicorp.com/terraform/language/functions/flatten	flatten($CARET)
+terraform	expression	distinct	function	list	Remove duplicate elements.	https://developer.hashicorp.com/terraform/language/functions/distinct	distinct($CARET)
+terraform	expression	sort	function	list	Sort strings.	https://developer.hashicorp.com/terraform/language/functions/sort	sort($CARET)
+terraform	expression	compact	function	list	Remove null and empty string elements.	https://developer.hashicorp.com/terraform/language/functions/compact	compact($CARET)
+terraform	expression	range	function	start, limit, step	Generate a sequence of numbers.	https://developer.hashicorp.com/terraform/language/functions/range	range($CARET)
+terraform	expression	zipmap	function	keys, values	Build a map from matching lists.	https://developer.hashicorp.com/terraform/language/functions/zipmap	zipmap($CARET)
+terraform	expression	basename	function	path	Return the final path component.	https://developer.hashicorp.com/terraform/language/functions/basename	basename($CARET)
+terraform	expression	dirname	function	path	Return the parent path.	https://developer.hashicorp.com/terraform/language/functions/dirname	dirname($CARET)
+terraform	expression	abspath	function	path	Resolve an absolute path.	https://developer.hashicorp.com/terraform/language/functions/abspath	abspath($CARET)
+terraform	expression	fileset	function	path, pattern	Find files matching a pattern.	https://developer.hashicorp.com/terraform/language/functions/fileset	fileset($CARET)
+terraform	expression	base64encode	function	text	Encode text as Base64.	https://developer.hashicorp.com/terraform/language/functions/base64encode	base64encode($CARET)
+terraform	expression	base64decode	function	text	Decode Base64 as UTF-8.	https://developer.hashicorp.com/terraform/language/functions/base64decode	base64decode($CARET)
+terraform	expression	sha256	function	text	Compute a SHA-256 digest.	https://developer.hashicorp.com/terraform/language/functions/sha256	sha256($CARET)
+terraform	expression	timestamp	function		Return the current UTC timestamp.	https://developer.hashicorp.com/terraform/language/functions/timestamp	timestamp($CARET)
+terraform	expression	formatdate	function	format, timestamp	Format a timestamp.	https://developer.hashicorp.com/terraform/language/functions/formatdate	formatdate($CARET)
+terraform	expression	regex	function	pattern, text	Find a regular expression match.	https://developer.hashicorp.com/terraform/language/functions/regex	regex($CARET)
+terraform	expression	regexall	function	pattern, text	Find all regular expression matches.	https://developer.hashicorp.com/terraform/language/functions/regexall	regexall($CARET)
+terraform	expression	cidrsubnet	function	prefix, newbits, netnum	Calculate an IP subnet.	https://developer.hashicorp.com/terraform/language/functions/cidrsubnet	cidrsubnet($CARET)
+terraform	expression	cidrhost	function	prefix, hostnum	Calculate an IP host address.	https://developer.hashicorp.com/terraform/language/functions/cidrhost	cidrhost($CARET)
+packer	expression	length	function	collection	Return the number of elements or characters.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/length	length($CARET)
+packer	expression	concat	function	lists...	Join lists in order.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/concat	concat($CARET)
+packer	expression	merge	function	maps...	Combine maps; later keys override earlier keys.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/merge	merge($CARET)
+packer	expression	lookup	function	map, key, default	Read a map entry with a fallback.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/lookup	lookup($CARET)
+packer	expression	coalesce	function	values...	Choose the first non-null, nonempty value.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/coalesce	coalesce($CARET)
+packer	expression	try	function	expressions...	Return the first expression that succeeds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/try	try($CARET)
+packer	expression	can	function	expression	Test whether evaluating an expression succeeds.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/can	can($CARET)
+packer	expression	jsonencode	function	value	Serialize a value as JSON.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/jsonencode	jsonencode($CARET)
+packer	expression	jsondecode	function	text	Parse JSON into an HCL value.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/jsondecode	jsondecode($CARET)
+packer	expression	file	function	path	Read a UTF-8 file.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/file	file($CARET)
+packer	expression	templatefile	function	path, vars	Render a template with named variables.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/templatefile	templatefile($CARET)
+packer	expression	format	function	format, args...	Format values as text.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/format	format($CARET)
+packer	expression	join	function	separator, list	Join strings with a separator.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/join	join($CARET)
+packer	expression	split	function	separator, text	Split text into a list.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/split	split($CARET)
+packer	expression	replace	function	text, search, replacement	Replace matching text.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/replace	replace($CARET)
+packer	expression	lower	function	text	Convert text to lowercase.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/lower	lower($CARET)
+packer	expression	upper	function	text	Convert text to uppercase.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/upper	upper($CARET)
+packer	expression	trimspace	function	text	Remove surrounding whitespace.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/trimspace	trimspace($CARET)
+packer	expression	toset	function	value	Convert a collection to a set.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/toset	toset($CARET)
+packer	expression	tolist	function	value	Convert a value to a list.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/tolist	tolist($CARET)
+packer	expression	tomap	function	value	Convert a value to a map.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/tomap	tomap($CARET)
+packer	expression	tostring	function	value	Convert a value to a string.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/tostring	tostring($CARET)
+packer	expression	tonumber	function	value	Convert a value to a number.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/tonumber	tonumber($CARET)
+packer	expression	tobool	function	value	Convert a value to a boolean.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/tobool	tobool($CARET)
+packer	expression	keys	function	map	Return the keys of a map.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/keys	keys($CARET)
+packer	expression	values	function	map	Return the values of a map.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/values	values($CARET)
+packer	expression	contains	function	collection, value	Test collection membership.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/contains	contains($CARET)
+packer	expression	flatten	function	list	Flatten nested lists.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/flatten	flatten($CARET)
+packer	expression	distinct	function	list	Remove duplicate elements.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/distinct	distinct($CARET)
+packer	expression	sort	function	list	Sort strings.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/sort	sort($CARET)
+packer	expression	compact	function	list	Remove null and empty string elements.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/compact	compact($CARET)
+packer	expression	range	function	start, limit, step	Generate a sequence of numbers.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/range	range($CARET)
+packer	expression	zipmap	function	keys, values	Build a map from matching lists.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/zipmap	zipmap($CARET)
+packer	expression	basename	function	path	Return the final path component.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/basename	basename($CARET)
+packer	expression	dirname	function	path	Return the parent path.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/dirname	dirname($CARET)
+packer	expression	abspath	function	path	Resolve an absolute path.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/abspath	abspath($CARET)
+packer	expression	fileset	function	path, pattern	Find files matching a pattern.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/fileset	fileset($CARET)
+packer	expression	base64encode	function	text	Encode text as Base64.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/base64encode	base64encode($CARET)
+packer	expression	base64decode	function	text	Decode Base64 as UTF-8.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/base64decode	base64decode($CARET)
+packer	expression	sha256	function	text	Compute a SHA-256 digest.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/sha256	sha256($CARET)
+packer	expression	timestamp	function		Return the current UTC timestamp.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/timestamp	timestamp($CARET)
+packer	expression	formatdate	function	format, timestamp	Format a timestamp.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/formatdate	formatdate($CARET)
+packer	expression	regex	function	pattern, text	Find a regular expression match.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/regex	regex($CARET)
+packer	expression	regexall	function	pattern, text	Find all regular expression matches.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/regexall	regexall($CARET)
+packer	expression	cidrsubnet	function	prefix, newbits, netnum	Calculate an IP subnet.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/cidrsubnet	cidrsubnet($CARET)
+packer	expression	cidrhost	function	prefix, hostnum	Calculate an IP host address.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/cidrhost	cidrhost($CARET)
+nomad	expression	length	function	collection	Return the number of elements or characters.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/length	length($CARET)
+nomad	expression	concat	function	lists...	Join lists in order.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/concat	concat($CARET)
+nomad	expression	merge	function	maps...	Combine maps; later keys override earlier keys.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/merge	merge($CARET)
+nomad	expression	lookup	function	map, key, default	Read a map entry with a fallback.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/lookup	lookup($CARET)
+nomad	expression	coalesce	function	values...	Choose the first non-null, nonempty value.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/coalesce	coalesce($CARET)
+nomad	expression	try	function	expressions...	Return the first expression that succeeds.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/try	try($CARET)
+nomad	expression	can	function	expression	Test whether evaluating an expression succeeds.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/can	can($CARET)
+nomad	expression	jsonencode	function	value	Serialize a value as JSON.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/jsonencode	jsonencode($CARET)
+nomad	expression	jsondecode	function	text	Parse JSON into an HCL value.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/jsondecode	jsondecode($CARET)
+nomad	expression	file	function	path	Read a UTF-8 file.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/file	file($CARET)
+nomad	expression	templatefile	function	path, vars	Render a template with named variables.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/templatefile	templatefile($CARET)
+nomad	expression	format	function	format, args...	Format values as text.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/format	format($CARET)
+nomad	expression	join	function	separator, list	Join strings with a separator.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/join	join($CARET)
+nomad	expression	split	function	separator, text	Split text into a list.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/split	split($CARET)
+nomad	expression	replace	function	text, search, replacement	Replace matching text.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/replace	replace($CARET)
+nomad	expression	lower	function	text	Convert text to lowercase.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/lower	lower($CARET)
+nomad	expression	upper	function	text	Convert text to uppercase.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/upper	upper($CARET)
+nomad	expression	trimspace	function	text	Remove surrounding whitespace.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/trimspace	trimspace($CARET)
+nomad	expression	toset	function	value	Convert a collection to a set.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/toset	toset($CARET)
+nomad	expression	tolist	function	value	Convert a value to a list.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/tolist	tolist($CARET)
+nomad	expression	tomap	function	value	Convert a value to a map.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/tomap	tomap($CARET)
+nomad	expression	tostring	function	value	Convert a value to a string.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/tostring	tostring($CARET)
+nomad	expression	tonumber	function	value	Convert a value to a number.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/tonumber	tonumber($CARET)
+nomad	expression	tobool	function	value	Convert a value to a boolean.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/tobool	tobool($CARET)
+nomad	expression	keys	function	map	Return the keys of a map.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/keys	keys($CARET)
+nomad	expression	values	function	map	Return the values of a map.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/values	values($CARET)
+nomad	expression	contains	function	collection, value	Test collection membership.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/contains	contains($CARET)
+nomad	expression	flatten	function	list	Flatten nested lists.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/flatten	flatten($CARET)
+nomad	expression	distinct	function	list	Remove duplicate elements.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/distinct	distinct($CARET)
+nomad	expression	sort	function	list	Sort strings.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/sort	sort($CARET)
+nomad	expression	compact	function	list	Remove null and empty string elements.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/compact	compact($CARET)
+nomad	expression	range	function	start, limit, step	Generate a sequence of numbers.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/range	range($CARET)
+nomad	expression	zipmap	function	keys, values	Build a map from matching lists.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/zipmap	zipmap($CARET)
+nomad	expression	basename	function	path	Return the final path component.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/basename	basename($CARET)
+nomad	expression	dirname	function	path	Return the parent path.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/dirname	dirname($CARET)
+nomad	expression	abspath	function	path	Resolve an absolute path.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/abspath	abspath($CARET)
+nomad	expression	fileset	function	path, pattern	Find files matching a pattern.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/fileset	fileset($CARET)
+nomad	expression	base64encode	function	text	Encode text as Base64.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/base64encode	base64encode($CARET)
+nomad	expression	base64decode	function	text	Decode Base64 as UTF-8.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/base64decode	base64decode($CARET)
+nomad	expression	sha256	function	text	Compute a SHA-256 digest.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/sha256	sha256($CARET)
+nomad	expression	timestamp	function		Return the current UTC timestamp.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/timestamp	timestamp($CARET)
+nomad	expression	formatdate	function	format, timestamp	Format a timestamp.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/formatdate	formatdate($CARET)
+nomad	expression	regex	function	pattern, text	Find a regular expression match.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/regex	regex($CARET)
+nomad	expression	regexall	function	pattern, text	Find all regular expression matches.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/regexall	regexall($CARET)
+nomad	expression	cidrsubnet	function	prefix, newbits, netnum	Calculate an IP subnet.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/cidrsubnet	cidrsubnet($CARET)
+nomad	expression	cidrhost	function	prefix, hostnum	Calculate an IP host address.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/functions/cidrhost	cidrhost($CARET)
+packer	expression	env	function	name	Read an environment variable.	https://developer.hashicorp.com/packer/docs/templates/hcl_templates/functions/env	env("$CARET")
+nomad	job:*/group:*/task:*/config:exec	command	attribute	string	Command for the exec task driver.	https://developer.hashicorp.com/nomad/docs/drivers/exec	
+nomad	job:*/group:*/task:*/config:exec	args	attribute	list	Args for the exec task driver.	https://developer.hashicorp.com/nomad/docs/drivers/exec	
+nomad	job:*/group:*/task:*/config:raw_exec	command	attribute	string	Command for the raw_exec task driver.	https://developer.hashicorp.com/nomad/docs/drivers/raw_exec	
+nomad	job:*/group:*/task:*/config:raw_exec	args	attribute	list	Args for the raw_exec task driver.	https://developer.hashicorp.com/nomad/docs/drivers/raw_exec	
+nomad	job:*/group:*/task:*/config:java	jar_path	attribute	string	Jar path for the java task driver.	https://developer.hashicorp.com/nomad/docs/drivers/java	
+nomad	job:*/group:*/task:*/config:java	class	attribute	string	Class for the java task driver.	https://developer.hashicorp.com/nomad/docs/drivers/java	
+nomad	job:*/group:*/task:*/config:java	jvm_options	attribute	list	Jvm options for the java task driver.	https://developer.hashicorp.com/nomad/docs/drivers/java	
+nomad	job:*/group:*/task:*/config:java	args	attribute	list	Args for the java task driver.	https://developer.hashicorp.com/nomad/docs/drivers/java	
+nomad	variable:*	validation	block	block	Validate an input variable before submitting the job.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/variables	
+nomad	variable:*/validation	condition	attribute	expression	Boolean condition that must succeed.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/variables	
+nomad	variable:*/validation	error_message	attribute	string	Message shown when validation fails.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/variables	
+nomad	root	variables	block	block	Declare input variables using literal defaults.	https://developer.hashicorp.com/nomad/docs/reference/hcl2/variables	

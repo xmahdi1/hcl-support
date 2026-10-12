@@ -1,0 +1,43 @@
+<idea-plugin url="https://github.com/xmahdi1/hcl-support">
+  <id>dev.hclassist</id>
+  <name>HCL Assist</name>
+  <version>0.2.2</version>
+  <vendor url="https://github.com/xmahdi1">xmahdi1</vendor>
+  <change-notes><![CDATA[<ul><li>Packer required-field templates across Amazon EBS, Docker, QEMU, VirtualBox ISO, provisioners, and shell-local post-processors.</li><li>Alternative inputs, communicator conditions, and project-defined requirement rules.</li></ul>]]></change-notes>
+  <description><![CDATA[
+    <p>HCL completion and documentation for Terraform, OpenTofu, Packer, Nomad, and Consul.</p>
+    <ul>
+      <li>Context-sensitive block, attribute, and function completion.</li>
+      <li>Required resource fields inserted as editable live templates using provider schemas.</li>
+      <li>Provider attribute documentation and required/optional field indicators.</li>
+      <li>Navigation to variables, locals, resources, modules, and Packer sources.</li>
+      <li>Project schemas and file-pattern overrides for custom HCL configurations.</li>
+    </ul>
+    <p>Requires the Terraform and HCL plugin. Supports IntelliJ IDEA Community and Ultimate.</p>
+    <p><a href="https://github.com/xmahdi1/hcl-support">Documentation and source</a> ·
+    <a href="https://github.com/xmahdi1/hcl-support/issues">Report an issue</a></p>
+  ]]></description>
+  <idea-version since-build="233" until-build="253.*"/>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>org.intellij.plugins.hcl</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <completion.contributor language="HCL" order="first" implementationClass="dev.hclassist.ide.HclCompletion"/>
+    <lang.documentationProvider language="HCL" implementationClass="dev.hclassist.ide.HclDocumentation"/>
+    <gotoDeclarationHandler implementation="dev.hclassist.ide.HclDeclaration"/>
+    <typedHandler implementation="dev.hclassist.ide.HclTypedHandler"/>
+    <enterHandlerDelegate implementation="dev.hclassist.ide.HclEnterHandler"/>
+    <intentionAction>
+      <className>dev.hclassist.ide.InsertRequiredFieldsIntention</className>
+      <category>HCL Assist</category>
+      <skipBeforeAfter>true</skipBeforeAfter>
+    </intentionAction>
+    <localInspection language="HCL" shortName="HclAssistDuplicateAttribute" displayName="Duplicate HCL attribute"
+      groupName="HCL Assist" enabledByDefault="true" level="WARNING" implementationClass="dev.hclassist.ide.HclInspection"/>
+  </extensions>
+  <actions>
+    <group id="HclAssist.Tools" text="HCL Assist" popup="true">
+      <add-to-group group-id="ToolsMenu" anchor="last"/>
+      <action id="HclAssist.RefreshSchema" class="dev.hclassist.ide.RefreshSchemaAction" text="Refresh Provider Schema" description="Read installed Terraform/OpenTofu provider schemas for the current module"/>
+    </group>
+  </actions>
+</idea-plugin>

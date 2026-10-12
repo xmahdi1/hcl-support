@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "blocks": {
+    "source:virtualbox-iso": {
+      "url": "https://developer.hashicorp.com/packer/integrations/hashicorp/virtualbox/latest/components/builder/iso",
+      "fields": [
+        {
+          "name": "iso_url",
+          "unlessAny": [
+            "iso_urls"
+          ]
+        },
+        {
+          "name": "iso_checksum"
+        },
+        {
+          "name": "ssh_username",
+          "when": {
+            "field": "communicator",
+            "equals": "ssh",
+            "default": "ssh"
+          }
+        },
+        {
+          "name": "winrm_username",
+          "when": {
+            "field": "communicator",
+            "equals": "winrm"
+          }
+        }
+      ]
+    },
+    "source:qemu": {
+      "url": "https://developer.hashicorp.com/packer/integrations/hashicorp/qemu/latest/components/builder/qemu",
+      "fields": [
+        {
+          "name": "iso_url",
+          "unlessAny": [
+            "iso_urls"
+          ]
+        },
+        {
+          "name": "iso_checksum"
+        },
+        {
+          "name": "ssh_username",
+          "when": {
+            "field": "communicator",
+            "equals": "ssh",
+            "default": "ssh"
+          }
+        },
+        {
+          "name": "winrm_username",
+          "when": {
+            "field": "communicator",
+            "equals": "winrm"
+          }
+        }
+      ]
+    },
+    "source:amazon-ebs": {
+      "url": "https://developer.hashicorp.com/packer/integrations/hashicorp/amazon/latest/components/builder/ebs",
+      "fields": [
+        {
+          "name": "ami_name"
+        },
+        {
+          "name": "region"
+        },
+        {
+          "name": "instance_type"
+        },
+        {
+          "name": "source_ami",
+          "unlessAny": [
+            "source_ami_filter"
+          ]
+        },
+        {
+          "name": "ssh_username",
+          "when": {
+            "field": "communicator",
+            "equals": "ssh",
+            "default": "ssh"
+          }
+        },
+        {
+          "name": "winrm_username",
+          "when": {
+            "field": "communicator",
+            "equals": "winrm"
+          }
+        }
+      ]
+    },
+    "source:docker": {
+      "url": "https://developer.hashicorp.com/packer/integrations/hashicorp/docker/latest/components/builder/docker",
+      "fields": [
+        {
+          "name": "image",
+          "unlessAny": [
+            "build"
+          ]
+        },
+        {
+          "name": "commit",
+          "type": "bool",
+          "unlessAny": [
+            "discard",
+            "export_path"
+          ],
+          "placeholder": "true"
+        }
+      ]
+    },
+    "source:docker/build": {
+      "url": "https://developer.hashicorp.com/packer/integrations/hashicorp/docker/latest/components/builder/docker",
+      "fields": [
+        {
+          "name": "path"
+        }
+      ]
+    },
+    "build/provisioner:shell": {
+      "url": "https://developer.hashicorp.com/packer/docs/provisioners/shell",
+      "fields": [
+        {
+          "name": "script",
+          "unlessAny": [
+            "inline",
+            "scripts"
+          ]
+        }
+      ]
+    },
+    "build/provisioner:shell-local": {
+      "url": "https://developer.hashicorp.com/packer/docs/provisioners/shell-local",
+      "fields": [
+        {
+          "name": "script",
+          "unlessAny": [
+            "inline",
+            "scripts",
+            "command"
+          ]
+        }
+      ]
+    },
+    "build/provisioner:powershell": {
+      "url": "https://developer.hashicorp.com/packer/docs/provisioners/powershell",
+      "fields": [
+        {
+          "name": "script",
+          "unlessAny": [
+            "inline",
+            "scripts"
+          ]
+        }
+      ]
+    },
+    "build/provisioner:file": {
+      "url": "https://developer.hashicorp.com/packer/docs/provisioners/file",
+      "fields": [
+        {
+          "name": "source",
+          "unlessAny": [
+            "sources",
+            "content"
+          ]
+        },
+        {
+          "name": "destination"
+        }
+      ]
+    },
+    "build/provisioner:ansible": {
+      "url": "https://developer.hashicorp.com/packer/integrations/hashicorp/ansible/latest/components/provisioner/ansible",
+      "fields": [
+        {
+          "name": "playbook_file"
+        }
+      ]
+    },
+    "build/post-processor:shell-local": {
+      "url": "https://developer.hashicorp.com/packer/docs/post-processors/shell-local",
+      "fields": [
+        {
+          "name": "script",
+          "unlessAny": [
+            "inline",
+            "scripts",
+            "command"
+          ]
+        }
+      ]
+    },
+    "build/post-processors/post-processor:shell-local": {
+      "url": "https://developer.hashicorp.com/packer/docs/post-processors/shell-local",
+      "fields": [
+        {
+          "name": "script",
+          "unlessAny": [
+            "inline",
+            "scripts",
+            "command"
+          ]
+        }
+      ]
+    }
+  }
+}
